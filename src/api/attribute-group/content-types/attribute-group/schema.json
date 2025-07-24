@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "attribute_groups",
+  "info": {
+    "singularName": "attribute-group",
+    "pluralName": "attribute-groups",
+    "displayName": "Attribute Group",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "product_attributes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-attribute.product-attribute",
+      "mappedBy": "attribute_group"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    }
+  }
+}

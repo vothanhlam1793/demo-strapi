@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "table_products",
+  "info": {
+    "singularName": "table-product",
+    "pluralName": "table-products",
+    "displayName": "Table Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "ItemProduct": {
+      "displayName": "products",
+      "type": "component",
+      "repeatable": true,
+      "component": "table-product.products"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    }
+  }
+}

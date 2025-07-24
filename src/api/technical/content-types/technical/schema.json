@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "technicals",
+  "info": {
+    "singularName": "technical",
+    "pluralName": "technicals",
+    "displayName": "Technical",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "enableNotify": {
+      "type": "boolean"
+    }
+  }
+}

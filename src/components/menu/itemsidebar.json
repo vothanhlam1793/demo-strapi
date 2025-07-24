@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_menu_itemsidebars",
+  "info": {
+    "displayName": "itemsidebar"
+  },
+  "options": {},
+  "attributes": {
+    "index": {
+      "type": "string"
+    },
+    "menu": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::menu.menu"
+    }
+  }
+}

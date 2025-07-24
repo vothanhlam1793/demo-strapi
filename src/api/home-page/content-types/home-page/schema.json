@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sidemenu": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sidemenu.sidemenu"
+    },
+    "banner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::banner.banner"
+    },
+    "shelves": {
+      "displayName": "shelves",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.shelves"
+    }
+  }
+}

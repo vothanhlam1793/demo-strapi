@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_homepage_shelves",
+  "info": {
+    "displayName": "shelves",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "enable": {
+      "type": "boolean"
+    },
+    "title": {
+      "type": "string"
+    },
+    "category_product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "col": {
+      "type": "integer"
+    },
+    "row": {
+      "type": "integer"
+    }
+  }
+}

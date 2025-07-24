@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_product_tag_products",
+  "info": {
+    "displayName": "tagProduct",
+    "icon": "heart"
+  },
+  "options": {},
+  "attributes": {
+    "variant": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "kind": "singleType",
+  "collectionName": "setups",
+  "info": {
+    "singularName": "setup",
+    "pluralName": "setups",
+    "displayName": "Setup",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "noImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title_web": {
+      "type": "string"
+    },
+    "sologan": {
+      "type": "string"
+    },
+    "contact": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::blog.blog"
+    },
+    "introduct": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::blog.blog"
+    },
+    "enable_notify": {
+      "type": "boolean"
+    },
+    "maintenance": {
+      "type": "boolean"
+    }
+  }
+}

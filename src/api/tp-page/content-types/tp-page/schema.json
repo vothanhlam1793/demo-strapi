@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "tp_pages",
+  "info": {
+    "singularName": "tp-page",
+    "pluralName": "tp-pages",
+    "displayName": "TPPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "table_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::table-product.table-product"
+    }
+  }
+}

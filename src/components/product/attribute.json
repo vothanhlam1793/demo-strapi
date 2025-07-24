@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_product_attributes",
+  "info": {
+    "displayName": "Attribute"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "value": {
+      "displayName": "value",
+      "type": "component",
+      "repeatable": true,
+      "component": "product.value"
+    }
+  }
+}

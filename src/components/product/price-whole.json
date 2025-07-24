@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_product_price_wholes",
+  "info": {
+    "displayName": "priceWhole",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    }
+  }
+}

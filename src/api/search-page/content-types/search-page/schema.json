@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "search_pages",
+  "info": {
+    "singularName": "search-page",
+    "pluralName": "search-pages",
+    "displayName": "Search Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sidemenu": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sidemenu.sidemenu"
+    }
+  }
+}

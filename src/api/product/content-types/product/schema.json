@@ -1,0 +1,123 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "price": {
+      "type": "integer",
+      "default": 1000,
+      "min": 1000
+    },
+    "description": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbarBalloon"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "descriptionShort": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "priceWhole": {
+      "displayName": "priceWhole",
+      "type": "component",
+      "repeatable": true,
+      "component": "product.price-whole"
+    },
+    "code": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag-product.tag-product",
+      "mappedBy": "product"
+    },
+    "branch": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::branch.branch"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "products"
+    },
+    "imagePresent": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "priceDealer": {
+      "type": "integer"
+    },
+    "priceInstall": {
+      "type": "integer"
+    },
+    "tagProduct": {
+      "displayName": "tagProduct",
+      "type": "component",
+      "repeatable": false,
+      "component": "product.tag-product"
+    },
+    "pricePromotionStart": {
+      "type": "datetime"
+    },
+    "pricePromotionEnd": {
+      "type": "datetime"
+    },
+    "pricePromotion": {
+      "type": "integer"
+    },
+    "attributes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.attribute"
+    },
+    "product_attributes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-attribute.product-attribute",
+      "inversedBy": "products"
+    }
+  }
+}
