@@ -10,7 +10,6 @@
   "scripts": {
     "build": "strapi build",
     "develop": "strapi develop",
-    "preinstall": "npx npm-force-resolutions",
     "start": "strapi start",
     "strapi": "strapi"
   },
