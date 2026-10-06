@@ -1,0 +1,36 @@
+services:
+  strapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: creta-demo-strapi:latest
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 1337
+      DATABASE_CLIENT: sqlite
+      DATABASE_FILENAME: /app/.tmp/data.db
+    ports:
+      - "1337:1337"
+    volumes:
+      - strapi-sqlite:/app/.tmp
+      - strapi-uploads:/app/public/uploads
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://127.0.0.1:1337/_health',r=>process.exit(r.statusCode<500?0:1)).on('error',()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 120s
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.creta-strapi.entrypoints=http
+      - traefik.http.routers.creta-strapi.rule=Host(`ruqlpnuckl9n1yhua0kotbhg.103.72.57.253.sslip.io`)
+      - traefik.http.services.creta-strapi.loadbalancer.server.port=1337
+volumes:
+  strapi-sqlite:
+    name: creta-strapi-sqlite
+  strapi-uploads:
+    name: creta-strapi-uploads
