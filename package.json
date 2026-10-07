@@ -42,5 +42,8 @@
   },
   "strapi": {
     "uuid": "0db616b8-b91c-4191-adec-c601f74aa4e5"
+  },
+  "overrides": {
+    "graphql": "^15.5.0"
   }
 }
